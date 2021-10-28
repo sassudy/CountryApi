@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Data</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <h1>Country information view</h1>
+    <form action="/DataCountry" method="POST">
+        <select name="optionCountry" >
+            <option value="EST">ESTONIA</option>
+            <option value="LV">LATVIA</option>
+            <option value="LTV">LITHUAINA</option>
+        </select>
+        <button type="submit">Get Data</button>
+        <p>Name: <%= CountryData.name %></p>
+        <p>Domain: <%= CountryData.Domain %></p>
+        <p>Calling Code: <%= CountryData.CallingCode %></p>
+        <p>Capital: <%= CountryData.Capital %></p>
+        <p>Region: <%= CountryData.Region %></p>
+        <p>Subregion: <%= CountryData.Subregion %></p>
+        <p>Population: <%= CountryData.population %></p>
+        <p>Timezone: <%= CountryData.Timezone %></p>
+        <p>Language: <%= CountryData.LanguageEnglish %></p>
+         <p>Currency: <%= CountryData.Currencyname %> <%= CountryData.Currencysymbol %></p>
+        <!-- <p>Currency Symbol: <%= CountryData.Currencysymbol %></p>-->
+       
+        <p><img style="height: 100px; width: 200px;" src="<%= CountryData.urlflag %>" alt="Lipp"></p>
+
+    </form>   
+   
+</body>
+</html>
